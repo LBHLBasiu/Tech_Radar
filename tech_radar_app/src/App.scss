@@ -1,0 +1,228 @@
+* {
+  box-sizing: border-box;
+}
+
+* {
+  font-family: 'Open Sans', sans-serif;
+}
+
+.main-heading {
+  font-size: 3.5em;
+  letter-spacing: -4px;
+}
+
+.card {
+  border: 0px;
+  .card-header {
+    background: transparent;
+    cursor: pointer;
+    button {
+      text-decoration: none;
+      color: black;
+      &:active, &:focus {
+        outline: 0px;
+        box-shadow: none;
+      }
+    }
+    &:hover {
+      background: black;
+      button {
+        color: white;
+      }
+    }
+  }
+}
+
+.radar-sub-headings {
+  position: absolute;
+  &.left {
+    left: 0px;
+  }
+  &.right {
+    right: 0px;
+  }
+  &.top {
+    top: 50%;
+  }
+  &.bottom {
+    bottom: 50%;
+  }
+  z-index: 4;
+  .sub-heading {
+    display: inline-block;
+    position: relative;
+    padding: 10px 25px 10px 25px;
+    font-size: 20px;
+    font-weight: bold;
+  }
+}
+
+.radar-flex-container {
+  display: flex;
+  position: relative;
+  flex-flow: row wrap;
+  .quad-container {
+    flex: 1 1;
+  }
+  .data-container {
+    flex: 1 1;
+  }
+}
+
+.radar-quad-container {
+  width: 800px;
+  height: 800px;
+  .radar-quad {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    background: #EEEEEE;
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+    .sub-radar {
+      position: absolute;
+      &.one {
+        background: #BABABA;
+        width: 25%;
+        height: 25%;
+        z-index: 3;
+      }
+      &.two {
+        background: #CACACA;
+        width: 45%;
+        height: 45%;
+        z-index: 2;
+      }
+      &.three {
+        background: #DADADA;
+        width: 70%;
+        height: 70%;
+        z-index: 1;
+      }
+      border-radius: 50%;
+      &.top-left {
+        background-image: linear-gradient(90deg, transparent 50%, white 50%),
+            linear-gradient(0deg, white 50%, transparent 50%);
+      }
+      &.top-right {
+        background-image: linear-gradient(180deg, transparent 50%, white 50%),
+            linear-gradient(90deg, white 50%, transparent 50%);
+      }
+      &.bottom-right {
+        background-image: linear-gradient(270deg, transparent 50%, white 50%),
+            linear-gradient(180deg, white 50%, transparent 50%);
+      }
+      &.bottom-left {
+        background-image: linear-gradient(360deg, transparent 50%, white 50%),
+            linear-gradient(270deg, white 50%, transparent 50%);
+      }
+    }
+    &.top-left {
+      background-image: linear-gradient(90deg, transparent 50%, white 50%),
+          linear-gradient(0deg, white 50%, transparent 50%);
+    }
+    &.top-right {
+      background-image: linear-gradient(180deg, transparent 50%, white 50%),
+          linear-gradient(90deg, white 50%, transparent 50%);
+    }
+    &.bottom-right {
+      background-image: linear-gradient(270deg, transparent 50%, white 50%),
+          linear-gradient(180deg, white 50%, transparent 50%);
+    }
+    &.bottom-left {
+      background-image: linear-gradient(360deg, transparent 50%, white 50%),
+          linear-gradient(270deg, white 50%, transparent 50%);
+    }
+  }
+}
+
+.header {
+  .flex-container {
+    display: flex;
+    position: relative;
+    flex-flow: row wrap;
+    background: #f4f5f8 !important;
+    $horizontal-padding: 250px;
+    padding-left: $horizontal-padding;
+    padding-right: $horizontal-padding;
+    .left-col {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 204px;
+      position: relative;
+      flex: 1 1;
+      text-align: center;
+      align-self: center;
+    }
+    .right-col {
+      display: flex;
+      flex-flow: row wrap;
+      position: relative;
+      flex: 1 1;
+      .break {
+        position: relative;
+        height: 1;
+        flex-basis: 100%;
+      }
+      .header-square {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100px;
+        border: 1px solid white;
+        background: #B2B2B2;
+        flex: 1 1;
+        color: white;
+        font-weight: bold;
+        cursor: pointer;
+        &.one {
+          $bg-col: blue;
+          opacity: 0.9;
+          &.active {
+            background: $bg-col;
+          }
+          &:hover {
+            background: $bg-col;
+            opacity: 0.8;
+          }
+        }
+        &.two {
+          $bg-col: green;
+          opacity: 0.9;
+          &.active {
+            background: $bg-col;
+          }
+          &:hover {
+            background: $bg-col;
+            opacity: 0.8;
+          }
+        }
+        &.three {
+          $bg-col: red;
+          opacity: 0.9;
+          &.active {
+            background: $bg-col;
+          }
+          &:hover {
+            background: $bg-col;
+            opacity: 0.8;
+          }
+        }
+        &.four {
+          $bg-col: purple;
+          opacity: 0.9;
+          &.active {
+            background: $bg-col;
+          }
+          &:hover {
+            background: $bg-col;
+            opacity: 0.8;
+          }
+        }
+      }
+    }
+  }
+}
