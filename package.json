@@ -1,0 +1,21 @@
+{
+  "name": "tech-radar-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server/index.js",
+    "build": "cd tech_radar_app && npm install && npm run build",
+    "buildstart": "cd tech_radar_app && npm install && npm run build && cd .. && npm start"
+  },
+  "engines": {
+    "node": "14"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "aws-sdk": "^2.924.0",
+    "express": "^4.17.1"
+  }
+}
